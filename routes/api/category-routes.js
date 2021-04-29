@@ -20,7 +20,7 @@ router.get('/', async(req, res) => {
 
 router.get('/:id', async(req, res) => {
   try {
-    const categoryData = await  Category.findOne({
+    const categoryData = await Category.findOne({
       where: {
           id: req.params.id
       },
