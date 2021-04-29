@@ -7,7 +7,7 @@ router.get('/', async(req, res) => {
   // find all categories
   // be sure to include its associated Products
   try {
-    const categoryData = await Category.findAll(req.params.products, {
+    const categoryData = await Category.findAll({
       include: [{ model: Product, 
               attributes: ['id', 'product_name', 'price', 'stock', 'category_id']}]
     });
@@ -20,10 +20,15 @@ router.get('/', async(req, res) => {
 
 router.get('/:id', async(req, res) => {
   try {
-    const categoryData = await Category.findByPk(req.params.id, {
-      // JOIN with locations, using the Trip through table
-      include: [{ model: Product, attributes: ['id', 'product_name', 'price', 'stock', 'category_id']}]
-    });
+    const categoryData = await  Category.findOne({
+      where: {
+          id: req.params.id
+      },
+      include: {
+          model: Product,
+          attributes: ['id', 'product_name', 'price', 'stock', 'category_id']
+      }
+  });
 
     if (!categoryData) {
       res.status(404).json({ message: 'no category found with this id' });
