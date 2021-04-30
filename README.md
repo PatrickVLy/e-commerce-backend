@@ -12,7 +12,8 @@
     
 <a name="descriptipn"></a>
 ## Description
-For this project I had to build on supplied code and create a working backend to access the database. I had to create models for the different tables and had to create routes for GET, PUT, POST, DELETE requests. 
+For this project I had to build on supplied code and create a working backend to access the database. I had to create models for the different tables and had to create routes for GET, PUT, POST, DELETE requests. This was a fairly easy assignment because most of the code was already supplied, all I had to do was set up the columns for the models and referenced them to the correct foreign keys. ![codeshot](codeshot.png)
+The associations were already supplied as well, I just had to make sure that the foreign keys referenced the right table ![codeshot2](codeshot2.png). Honestly the hardest part about this project was making sure the routes were going to the right places![codeshot3](codeshot3.png)
     
 <a name="installation"></a>
 ## Installation
@@ -20,7 +21,7 @@ Install all the necessary dependencies do an ```npm install express sequelize my
     
 <a name="usage"></a>
 ## Usage
-In Insomnia, once youve connected to the server by running ```node server.js``` in the command line, you can start sending GET/PUT/POST/DELETE requests the database should show or update with the requests you've made
+In Insomnia, once you've connected to the server by running ```node server.js``` in the command line, you can start sending GET/PUT/POST/DELETE requests and the database should show or update with the requests you've made
     
 <a name="contributing"></a>
 ## Contributing
