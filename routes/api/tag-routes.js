@@ -34,7 +34,7 @@ router.get('/:id', async(req, res) => {
       }
   });
 
-    if (!productData) {
+    if (!tagData) {
       res.status(404).json({ message: 'no tag found with this id' });
       return;
     }
@@ -82,7 +82,7 @@ router.delete('/:id', async(req, res) => {
       }
     });
 
-    if (!categoryData) {
+    if (!tagData) {
       res.status(404).json({ message: 'No tag found with this id!' });
       return;
     }
